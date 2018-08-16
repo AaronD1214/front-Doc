@@ -13,17 +13,17 @@
     ```javascript
     define(function(require, exports, module) {
         'use strict';
-    
+
         var _ = require('underscore');
-    
+
         var queue = [];
-    
+
         var initModule = function() {
             _.each(queue, function(v, i) {
                 // do something
             });
         };
-    
+
         module.exports = {
             init: initModule
         };
@@ -41,13 +41,13 @@
   5. 注意使用空格/空行
 
     完整示例
-    
+
     ```javascript
     function walk(holder, key) {
-    
+
         // The walk method is used to recursively walk the resulting structure so
         // that modifications can be made.
-    
+
         var k, v, value = holder[key];
         if (value && typeof value === 'object') {
             for (k in value) {
@@ -61,7 +61,7 @@
                 }
             }
         }
-    
+
         return reviver.call(holder, key, value);
     }
     ```
@@ -73,7 +73,7 @@
     ```
 
     不需要出现空格的包括: ` ;, ., (), []`
-                        
+
     后边带空格的包括:
 
     ```
@@ -108,14 +108,14 @@
 
   9. 将每条语句放置在一个单独的代码行中保持可读性, 不要出现 aNum++; anOtherNum++;在同一行, var 也一样;
 
-    **(√)**
-    
+    **(正确)**
+
     ```javascript
     aNum++;
     anOtherNum++;
     ```
 
-    **(╳)**
+    **(错误)**
 
     ```javascript
     aNum++; anOtherNum++;
@@ -130,17 +130,17 @@
     ```javascript
     var variableNamesLikeThis = '...',  // 变量
         CONSTANTS_LIKE_THIS = '...';    // 常量
-    
+
     // 函数
     function functionNamesLikeThis() {
         ...
     };
-    
+
     // 构造类
     function ClassNamesLikeThis() {
         ...
     };
-    
+
     // 方法&属性等
     ClassNamesLikeThis.methodNamesLikeThis = function(){
         ...
@@ -172,15 +172,15 @@
     function Student() {
         ...
     };
-    
+
     Student.prototype.getName = function() {
         ...
     };
-    
+
     Student.prototype.setName = function(name) {
         ...
     };
-    
+
     // 返回值为布尔类型的Getters方法
     Student.prototype.isGirl= function() {
         if (...) {
@@ -245,7 +245,7 @@
   13. js钩子命名必须以j开头的驼峰命名，并且不能此钩子不能有应用样式
 
     **(√)**
-    
+
     ```html
     <button class="jSubmit">提交</button>
     <button id="jSubmit">提交</button>
@@ -348,7 +348,7 @@
     同一作用域块内的变量尽量使用一个“var”语句来声明
 
     **(√)**
-    
+
     ```javascript
     // 但仍旧不建议在语句块内声明函数，即使是表达式的方式
     if (...) {
@@ -368,7 +368,7 @@
     }
     ```
 
-  6. 块内函数声明: 不要在块内声明一个函数. 
+  6. 块内函数声明: 不要在块内声明一个函数.
 
     不要写成.
 
@@ -390,7 +390,7 @@
     }
     ```
 
-  7. 闭包，用起来要小心，因为如果处理不当很容易导致内存泄漏. 及时释放闭包变量引用, destory() 方法的设计. 
+  7. 闭包，用起来要小心，因为如果处理不当很容易导致内存泄漏. 及时释放闭包变量引用, destory() 方法的设计.
 
   8. eval(): 只用于解析序列化串
 
@@ -411,9 +411,9 @@
     console.log(user.name);
     ```
 
-  9. with() {}: 不要使用 
+  9. with() {}: 不要使用
 
-  10. this: 仅在对象构造器, 方法, 闭包中使用. 
+  10. this: 仅在对象构造器, 方法, 闭包中使用.
 
     `this`的语义很特别. 有时它引用一个全局对象(大多数情况下), 调用者的作用域(使用 eval时), DOM 树中的节点(添加事件处理函数时),
     新创建的对象(使用一个构造器), 或者其他对象(如果函数被`call()` 或`apply()`).
@@ -422,7 +422,7 @@
 
     在构造器中 对象的方法(包括创建的闭包)中
 
-  11. for-in 循环: 只用于 object/map/hash 的遍历,对 Array 用 for-in 循环有时会出错. 因为它并不是从 0 到 length - 1 进行遍历, 而是所有出现在对象及其原型链的键值. 下面就是一些失败的使用案例: 
+  11. for-in 循环: 只用于 object/map/hash 的遍历,对 Array 用 for-in 循环有时会出错. 因为它并不是从 0 到 length - 1 进行遍历, 而是所有出现在对象及其原型链的键值. 下面就是一些失败的使用案例:
 
     ```javascript
     // 本来只要输出0，1；结果输出了0,1,djune;
@@ -433,7 +433,7 @@
     }
     ```
 
-  12. 尽量不修改内置对象的原型 
+  12. 尽量不修改内置对象的原型
 
     千万不要修改内置对象, 如`Object.prototype`和`Array.prototype` 的原型. 而修改内置对象, 如
     `Function.prototype`的原型, 虽然少危险些, 但仍会导致调试时的诡异现象. 所以也要避免修改其原型.
@@ -450,7 +450,7 @@
         b: 2,
         'say hello': 'hello'
     };
-    
+
     var arr = [1, 2, 'hello'];
     ```
 
@@ -458,7 +458,7 @@
 
 ### 注释
 
-  1. 类注释 
+  1. 类注释
 
     每个类的定义都要附带一份注释, 描述类的功能和用法. 也需要说明构造器参数.
 
@@ -480,7 +480,7 @@
     goog.inherits(project.MyClass, goog.Disposable);
     ```
 
-  2. 方法与函数的注释 
+  2. 方法与函数的注释
 
     提供参数的说明. 使用完整的句子, 并用第三人称来书写方法说明.
 
@@ -525,8 +525,8 @@
      */
     project.MyClass.prototype.someProperty = 4;
     ```
-                      
-  4. 类型转换的注释 
+
+  4. 类型转换的注释
 
     有时, 类型检查不能很准确地推断出表达式的类型, 所以应该给它添加类型标记注释来明确之, 并且必须在表达式和类型标签外面包裹括号.
 
@@ -547,7 +547,7 @@
         MAYBE: 0
     };
     ```
-                      
+
     注意一下, 枚举也具有有效类型, 所以可以当成参数类型来用.
 
     ```javascript
@@ -621,11 +621,11 @@
     ```
 
     你可以使用 @typedef 标记来定义个常用的类型表达式
-    
+
     ```javascript
     /** @typedef {(string|Element|Text|Array)} */
     goog.ElementContent;
-    
+
     /**
     * @param {string} tagName
     * @param {goog.ElementContent} contents
