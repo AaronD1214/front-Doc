@@ -133,27 +133,27 @@
 
   2. css属性使用缩写。
 
-    **(错误示例)**
+    **(不推荐写法)**
     ```css
     padding-top: 1px;
     padding-right: 2px;
     padding-bottom: 3px;
     padding-left: 4px;
     ```
-    **(正确示例)**
+    **(推荐写法)**
     ```css
     padding: 1px 2px 3px 4px;
     ```
 
   3. 0不带单位 (动画0%除外)。
 
-    **(正确示例)**
+    **(推荐写法)**
     ```css
     margin: 0;
     font-size: 0;
     ```
 
-    **(错误示例)**
+    **(不推荐写法)**
     ```css
     margin: 0px;
     font-size: 0px;
@@ -161,13 +161,13 @@
 
   4. 使用简写的十六进制值。
 
-    **(√)**
+    **(推荐写法)**
 
     ```css
     color: #edf;
     ```
 
-    **(╳)**
+    **(不推荐写法)**
 
     ```css
     color: #eeddff;
