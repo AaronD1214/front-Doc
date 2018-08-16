@@ -23,7 +23,7 @@
 
     ```
 
-    **(╳)**
+    **(x)**
 
     ```html
     <A HREF="/" attr="attr">Home</A>
@@ -60,8 +60,8 @@
     **(╳)**
 
     ```html
-    <div class="Sns-box"></div>  
-    <div class="snsBox"></div>  
+    <div class="Sns-box"></div>
+    <div class="snsBox"></div>
     <div class="Box"></div>
     ```
 
