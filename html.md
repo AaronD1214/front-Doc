@@ -14,7 +14,7 @@
     <meta charset="utf-8" />
     ```
 
-  3. <head>中添加信息。
+  3. <HEAD>中添加信息。
 
     <meta name="author" content="smile@kang.cool">  //作者
     <meta name="description" content="hello">  //网页描述
