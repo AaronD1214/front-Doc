@@ -29,7 +29,12 @@ Front-End JSON(P) API Specification
   示例:
 
   ```javascripton
-  {"error": "2", "msg": "user session timeout", "data": "http://login.yunhou.com/login.php?t", "ver": "1.0"}
+  {
+    "error": "2",
+    "msg": "user session timeout",
+    "data": "http://login.yunhou.com/login.php?t",
+    "ver": "1.0"
+  }
   ```
 
 ## 其他
