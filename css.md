@@ -12,11 +12,11 @@
 
   5. 缩进以4个空格为基本单位[[参考]](http://www.cnblogs.com/kungfupanda/archive/2012/09/05/2671597.html)。
 
-  6. 样式使用竖排, 不要使用横排以及 n 级缩进等。 
+  6. 样式使用竖排, 不要使用横排以及 n 级缩进等。
 
-  7. 对于所有`hack`请放到每个样式定义的最后边。 
+  7. 对于所有`hack`请放到每个样式定义的最后边。
 
-  8. class selector 层级尽量控制在 5 层以内。 
+  8. class selector 层级尽量控制在 5 层以内。
 
   9. 严格控制 `important` 关健字的使用场景，尽量少用。
 
@@ -42,7 +42,7 @@
     头部|header|主体|   main
     脚部|footer|容器|wrapper
     侧栏|sidebar|栏目|column
-    布局|layout|| 
+    布局|layout||
 
   2. 模块结构命名
 
@@ -120,43 +120,43 @@
 ## 属性使用
 
   1. z-index
-  
+
     ```
-    //右侧导航: 100-109 
-    //弹窗: 110-119 
-    //顶部: 90-99 
-    //搜索: 80-89 
-    //导航: 70-79 
-    //主内容: 50-59 
+    //右侧导航: 100-109
+    //弹窗: 110-119
+    //顶部: 90-99
+    //搜索: 80-89
+    //导航: 70-79
+    //主内容: 50-59
     //底部: 40-49
     ```
-  
+
   2. css属性使用缩写。
 
-    **(╳)**
+    **(错误示例)**
     ```css
     padding-top: 1px;
     padding-right: 2px;
     padding-bottom: 3px;
     padding-left: 4px;
     ```
-    **(√)**
+    **(正确示例)**
     ```css
-    padding: 1px 2px 3px 4px;                          
+    padding: 1px 2px 3px 4px;
     ```
 
   3. 0不带单位 (动画0%除外)。
 
-    **(√)**
+    **(正确示例)**
     ```css
     margin: 0;
     font-size: 0;
     ```
 
-    **(╳)**
+    **(错误示例)**
     ```css
-    margin: 0px;  
-    font-size: 0px;                        
+    margin: 0px;
+    font-size: 0px;
     ```
 
   4. 使用简写的十六进制值。
@@ -170,15 +170,15 @@
     **(╳)**
 
     ```css
-    color: #eeddff;                    
+    color: #eeddff;
     ```
 
   5. `border`以 `width, style, color` 的顺序书写, `width`单位使用 `px/rem`, 例如:
 
     ```css
-    border: 1px solid #000;  
-    border-top: 1px solide #000;  
-    border-top-color: red;  
+    border: 1px solid #000;
+    border-top: 1px solide #000;
+    border-top-color: red;
     border: 0;
     ```
 
@@ -231,7 +231,7 @@
      */
     ```
 
-  2. 对于html模块需要加注释。 
+  2. 对于html模块需要加注释。
 
   3. 奇葩点的 hack 要加注释。
 
